@@ -5,7 +5,8 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/fargate/service/javalin-app",
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/fargate/service/java-poc-service",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "fargate"
                 }
