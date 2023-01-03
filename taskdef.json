@@ -17,7 +17,7 @@
                     "containerPort": 7000
                 }
             ],
-            "image": "778752330526.dkr.ecr.us-east-1.amazonaws.com/ecs-poc-java-repo:60749f51b75040ca4fd6f4e55c41290887ad0ead",
+            "image": "778752330526.dkr.ecr.us-east-1.amazonaws.com/ecs-poc-java-repo:javatagpoc",
             "name": "javalin-app"
         }
     ],
