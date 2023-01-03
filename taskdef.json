@@ -1,0 +1,32 @@
+{
+    "executionRoleArn": "arn:aws:iam::778752330526:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/fargate/service/javalin-app",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "fargate"
+                }
+            },
+            "portMappings": [
+                {
+                    "hostPort": 7000,
+                    "protocol": "tcp",
+                    "containerPort": 7000
+                }
+            ],
+            "image": "778752330526.dkr.ecr.us-east-1.amazonaws.com/ecs-poc-java-repo:60749f51b75040ca4fd6f4e55c41290887ad0ead",
+            "name": "javalin-app"
+        }
+    ],
+    "memory": "512",
+    "family": "javalin-app-td",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256"
+   
+}
